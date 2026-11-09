@@ -1,0 +1,31 @@
+# Zweli Spaza Shop - Web Development PoE (Part 3)
+
+* **Student Name:** Nndinde Netshandama
+* **Student Number:** ST10523461
+* **Module:** WEDE5020
+
+## Project Overview
+Zweli Spaza Shop is a responsive web application and digital storefront designed to showcase local inventory, handle customer enquiries, and provide direct communication channels.
+
+---
+
+## Changelog & Version History
+
+### Part 2 Feedback Corrections
+- **Navigation & Layout Adjustments:** Refined header alignments and responsive spacing.
+
+- **Accessibility & Contrast:** Did a couple color schemes to comply with accessibility standards.
+O.
+
+### Part 3 Additions & Features
+- **Navigation & Layout Adjustments:** Refined header alignments and responsive spacing, and displayed more on my index.html(Home)
+
+- **Accessibility & Contrast:** Did a couple color schemes to comply with accessibility standards but still the same for part 3
+
+- **Interactive Forms (`enquiry.html` & `contact.html`):** Created separate pages for stock enquiries and general customer messages, complete with dropdown selectors for categories and message types.
+
+- **Client-Side Validation (`script.js`):** Implemented JavaScript validation checking for empty fields, proper email formats, and minimum character constraints, that will be easier for customers to use.
+
+- **AJAX Dynamic Notices:** Configured asynchronous confirmation elements (`.notice`) that display submission success messages without reloading the page.
+
+- **Search Engine Optimisation (SEO):** Integrated structured metadata, semantic heading hierarchies, a `robots.txt` crawler file, and a `sitemap.xml` file.

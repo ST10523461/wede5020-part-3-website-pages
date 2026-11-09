@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zweli Spaza Shop - Enquiry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>🛒 Zweli Spaza Shop</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h2>Product & Stock Enquiry</h2>
+        <p>Looking for a specific item or want to check stock availability? Fill out the form below.</p>
+
+        <form id="enquiryForm" novalidate>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="category">Product Category</label>
+            <select id="category" name="category" required>
+                <option value="">-- Select Category --</option>
+                <option value="Bakery">Fresh Bread & Bakery</option>
+                <option value="Dairy">Dairy & Milk</option>
+                <option value="Snacks">Snacks & Cold Drinks</option>
+                <option value="Household">Household Essentials</option>
+            </select>
+
+            <label for="message">Enquiry Details</label>
+            <textarea id="message" name="message" placeholder="Describe the item or stock you are looking for..." required></textarea>
+
+            <button type="submit">Submit Enquiry</button>
+        </form>
+
+        <div id="formMessage" style="margin-top: 20px;"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 <strong>Zweli Spaza Shop</strong>. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

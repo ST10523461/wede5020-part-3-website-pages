@@ -1,0 +1,235 @@
+/* ==========================================================================
+   ZWEL'I SPAZA SHOP — EPIC & MODERN MASTER STYLESHEET
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. DESIGN TOKENS & ROOT VARIABLES
+   -------------------------------------------------------------------------- */
+:root {
+  /* Brand Palette */
+  --primary: #111827;         /* Deep Rich Charcoal */
+  --primary-accent: #1e3a8a;  /* Royal Blue Accent */
+  --brand-orange: #f97316;    /* Vibrant Energy Accent */
+  --brand-gold: #fbbf24;      /* Gold/Yellow Highlight */
+  --whatsapp-green: #25d366;  /* Authentic WhatsApp Color */
+
+  /* Neutral Spectrum */
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --border-light: #e2e8f0;
+
+  /* Elevation Shadows & Glows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.06);
+  --glow-accent: 0 0 20px rgba(249, 115, 22, 0.3);
+
+  /* Typography & Radius */
+  --font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --------------------------------------------------------------------------
+   2. MODERN CSS RESET & BASE STYLES
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.65;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-accent);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-orange);
+}
+
+/* --------------------------------------------------------------------------
+   3. TYPOGRAPHY & HEADINGS
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4 {
+  color: var(--primary);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  background: linear-gradient(135deg, var(--primary) 30%, var(--primary-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  position: relative;
+  display: inline-block;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--brand-orange), transparent);
+  border-radius: 2px;
+  margin-top: 6px;
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+}
+
+/* --------------------------------------------------------------------------
+   4. EPIC HEADER & NAVIGATION BAR
+   -------------------------------------------------------------------------- */
+header {
+  background: rgba(17, 24, 39, 0.95);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 0;
+  box-shadow: var(--shadow-md);
+}
+
+header .header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Shop Title / Branding in Header */
+header h1, header .logo-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  -webkit-text-fill-color: initial;
+  background: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 0.75rem;
+}
+
+nav a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-smooth);
+}
+
+nav a:hover,
+nav a:focus {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+nav a:active {
+  background: var(--brand-orange);
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   5. CONTAINER & PAGE LAYOUTS
+   -------------------------------------------------------------------------- */
+main {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero Section Banner */
+.hero, section.hero-banner {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  color: #ffffff;
+  padding: 3.5rem 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {
+  color: #ffffff;
+  -webkit-text-fill-color: initial;
+}
+
+.hero p {
+  color: #94a3b8;
+  font-size: 1.2rem;
+}
+
+/* --------------------------------------------------------------------------
+   6. CARDS, GRID LAYOUTS & PRODUCTS
+   -------------------------------------------------------------------------- */
+/*// ...existing code...
+.product-grid, .content-grid, .grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+// ...existing code...
